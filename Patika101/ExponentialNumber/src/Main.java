@@ -2,15 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     static int Exponential(int base,int power){
-        int result=1;
         if (power == 0) {
             return 1;
-        }else{
-            for (int i=0;i<power;i++){
-                result*=base;
-            }
-            return result;
-        }
+        }else
+            return base*Exponential(base, power-1);
     }
 
     public static void main(String[] args) {
